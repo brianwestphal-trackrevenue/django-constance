@@ -12,7 +12,7 @@ except ImportError:
 
 
 class Constance(models.Model):
-    key = models.CharField(max_length=255, unique=True)
+    key = models.CharField(max_length=191, unique=True)
     value = PickledObjectField()
 
     class Meta:

@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(verbose_name='ID', primary_key=True,
                                         auto_created=True, serialize=False)),
-                ('key', models.CharField(unique=True, max_length=255)),
+                ('key', models.CharField(unique=True, max_length=191)),
                 ('value', picklefield.fields.PickledObjectField(editable=False)),
             ],
             options={

@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
         # Changing field 'Constance.key'
         db.alter_column('constance_config', 'key',
                         self.gf('django.db.models.fields.CharField')(
-                            max_length=255))
+                            max_length=191))
         # Adding unique constraint on 'Constance', fields ['key']
         db.create_unique('constance_config', ['key'])
 
@@ -28,7 +28,7 @@ class Migration(SchemaMigration):
             'id': ('django.db.models.fields.AutoField', [],
                    {'primary_key': 'True'}),
             'key': ('django.db.models.fields.CharField', [],
-                    {'unique': 'True', 'max_length': '255'}),
+                    {'unique': 'True', 'max_length': '191'}),
             'value': ('picklefield.fields.PickledObjectField', [], {})
         }
     }
